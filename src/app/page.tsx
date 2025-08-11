@@ -1,10 +1,10 @@
-import { Button } from "@/components/ui/button";
+import { Header } from "@/components/common/header";
 
 function Home() {
   return (
-    <div>
-      <Button>Botao</Button>
-    </div>
+    <>
+      <Header />
+    </>
   );
 }
 
