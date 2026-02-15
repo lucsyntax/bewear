@@ -23,32 +23,42 @@ const ProductActions = ({ productVariantId }: ProductActionsProps) => {
   };
 
   return (
-    <>
-      <div className="px-5">
-        <div className="space-y-4">
-          <h3 className="font-medium">Quantidade</h3>
-          <div className="flex w-[100px] items-center justify-between rounded-lg border">
-            <Button size="icon" variant="ghost" onClick={handleDecrement}>
-              <MinusIcon />
-            </Button>
-            <p>{quantity}</p>
-            <Button size="icon" variant="ghost" onClick={handleIncrement}>
-              <PlusIcon />
-            </Button>
+    <div className="space-y-6">
+      <div className="flex items-center gap-4">
+        <label className="font-mono text-sm uppercase tracking-wide">Quantidade:</label>
+        <div className="flex items-center border-2 border-border bg-card shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+          <Button
+            size="icon"
+            variant="ghost"
+            onClick={handleDecrement}
+            className="h-10 w-10 rounded-none border-r-2 border-border hover:bg-muted"
+          >
+            <MinusIcon className="h-4 w-4" />
+          </Button>
+          <div className="flex h-10 w-12 items-center justify-center font-mono text-lg font-bold">
+            {quantity}
           </div>
+          <Button
+            size="icon"
+            variant="ghost"
+            onClick={handleIncrement}
+            className="h-10 w-10 rounded-none border-l-2 border-border hover:bg-muted"
+          >
+            <PlusIcon className="h-4 w-4" />
+          </Button>
         </div>
       </div>
 
-      <div className="flex flex-col space-y-4 px-5 pb-6">
+      <div className="space-y-3">
         <AddToCartButton
           productVariantId={productVariantId}
           quantity={quantity}
         />
-        <Button className="rounded-full" size="lg">
+        <Button className="w-full rounded-none border-2 border-black bg-white text-black text-lg font-black uppercase tracking-wider hover:bg-black hover:text-white hover:translate-x-[2px] hover:translate-y-[2px] transition-all shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-none" size="lg">
           Comprar agora
         </Button>
       </div>
-    </>
+    </div>
   );
 };
 

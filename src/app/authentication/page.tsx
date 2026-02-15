@@ -9,7 +9,8 @@ const Authentication = async () => {
     <>
       <Header />
 
-      <div className="flex w-full flex-col gap-6 p-5">
+      <main className="flex w-full flex-col gap-6 p-5">
+        <h1 className="sr-only">Autenticação</h1>
         <Tabs defaultValue="sign-in">
           <TabsList>
             <TabsTrigger value="sign-in">Entrar</TabsTrigger>
@@ -22,7 +23,7 @@ const Authentication = async () => {
             <SignUpForm />
           </TabsContent>
         </Tabs>
-      </div>
+      </main>
     </>
   );
 };

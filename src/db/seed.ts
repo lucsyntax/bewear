@@ -238,6 +238,86 @@ const productImages = {
       "https://d4lgxe9bm8juw.cloudfront.net/products/Te%CC%82nis/4/bb4e381c_84ae_4ced_814f_8553afc6eacf.jpg",
     ],
   },
+  // ── New Products (placeholder images) ──
+  "Shoulder Bag": {
+    Preta: [
+      "https://placehold.co/800x800.png/1a1a1a/ffffff?text=Shoulder+Bag",
+    ],
+    Bege: [
+      "https://placehold.co/800x800.png/d4b896/333333?text=Shoulder+Bag",
+    ],
+  },
+  "Bucket Hat": {
+    Preto: [
+      "https://placehold.co/800x800.png/1a1a1a/ffffff?text=Bucket+Hat",
+    ],
+    Branco: [
+      "https://placehold.co/800x800.png/f5f5f5/333333?text=Bucket+Hat",
+    ],
+    Verde: [
+      "https://placehold.co/800x800.png/2d5a27/ffffff?text=Bucket+Hat",
+    ],
+  },
+  "Shorts Fleece": {
+    Cinza: [
+      "https://placehold.co/800x800.png/6b6b6b/ffffff?text=Shorts+Fleece",
+    ],
+    Preto: [
+      "https://placehold.co/800x800.png/1a1a1a/ffffff?text=Shorts+Fleece",
+    ],
+  },
+  "Calça Cargo": {
+    Verde: [
+      "https://placehold.co/800x800.png/2d5a27/ffffff?text=Calca+Cargo",
+    ],
+    Preta: [
+      "https://placehold.co/800x800.png/1a1a1a/ffffff?text=Calca+Cargo",
+    ],
+    Bege: [
+      "https://placehold.co/800x800.png/d4b896/333333?text=Calca+Cargo",
+    ],
+  },
+  "Camiseta Oversized": {
+    Preta: [
+      "https://placehold.co/800x800.png/1a1a1a/ffffff?text=Camiseta+Oversized",
+    ],
+    Branca: [
+      "https://placehold.co/800x800.png/f5f5f5/333333?text=Camiseta+Oversized",
+    ],
+    Cinza: [
+      "https://placehold.co/800x800.png/6b6b6b/ffffff?text=Camiseta+Oversized",
+    ],
+  },
+  "Regata Training": {
+    Preta: [
+      "https://placehold.co/800x800.png/1a1a1a/ffffff?text=Regata+Training",
+    ],
+    Branca: [
+      "https://placehold.co/800x800.png/f5f5f5/333333?text=Regata+Training",
+    ],
+  },
+  "Moletom Hoodie": {
+    Preto: [
+      "https://placehold.co/800x800.png/1a1a1a/ffffff?text=Moletom+Hoodie",
+    ],
+    Cinza: [
+      "https://placehold.co/800x800.png/6b6b6b/ffffff?text=Moletom+Hoodie",
+    ],
+    Verde: [
+      "https://placehold.co/800x800.png/2d5a27/ffffff?text=Moletom+Hoodie",
+    ],
+  },
+  "Tênis Nike Air Max": {
+    Preto: [
+      "https://placehold.co/800x800.png/1a1a1a/ffffff?text=Air+Max",
+    ],
+    Branco: [
+      "https://placehold.co/800x800.png/f5f5f5/333333?text=Air+Max",
+    ],
+    Azul: [
+      "https://placehold.co/800x800.png/1e3a5f/ffffff?text=Air+Max",
+    ],
+  },
 };
 
 function generateSlug(name: string): string {
@@ -534,6 +614,104 @@ const products = [
       { color: "Azul", price: 75999 },
     ],
   },
+
+  // ── New Products ──
+  // Acessórios
+  {
+    name: "Shoulder Bag",
+    description:
+      "Bolsa lateral compacta estilo streetwear, perfeita para o dia a dia urbano.",
+    categoryName: "Acessórios",
+    variants: [
+      { color: "Preta", price: 8999 },
+      { color: "Bege", price: 8999 },
+    ],
+  },
+  {
+    name: "Bucket Hat",
+    description:
+      "Chapéu bucket com estilo urban, versátil e confortável para qualquer ocasião.",
+    categoryName: "Acessórios",
+    variants: [
+      { color: "Preto", price: 6999 },
+      { color: "Branco", price: 6999 },
+      { color: "Verde", price: 6999 },
+    ],
+  },
+
+  // Bermuda & Shorts
+  {
+    name: "Shorts Fleece",
+    description:
+      "Shorts de moletom premium com tecido fleece macio e confortável.",
+    categoryName: "Bermuda & Shorts",
+    variants: [
+      { color: "Cinza", price: 7499 },
+      { color: "Preto", price: 7499 },
+    ],
+  },
+
+  // Calças
+  {
+    name: "Calça Cargo",
+    description:
+      "Calça cargo com bolsos laterais funcionais, estilo utilitário e confortável.",
+    categoryName: "Calças",
+    variants: [
+      { color: "Verde", price: 16999 },
+      { color: "Preta", price: 16999 },
+      { color: "Bege", price: 16999 },
+    ],
+  },
+
+  // Camisetas
+  {
+    name: "Camiseta Oversized",
+    description:
+      "Camiseta oversized com corte largo e caimento relaxado, estilo streetwear.",
+    categoryName: "Camisetas",
+    variants: [
+      { color: "Preta", price: 7999 },
+      { color: "Branca", price: 7999 },
+      { color: "Cinza", price: 7999 },
+    ],
+  },
+  {
+    name: "Regata Training",
+    description:
+      "Regata esportiva para treinos com tecido leve e respirável.",
+    categoryName: "Camisetas",
+    variants: [
+      { color: "Preta", price: 4999 },
+      { color: "Branca", price: 4999 },
+    ],
+  },
+
+  // Jaquetas & Moletons
+  {
+    name: "Moletom Hoodie",
+    description:
+      "Moletom com capuz e bolso canguru, confortável e estiloso para o dia a dia.",
+    categoryName: "Jaquetas & Moletons",
+    variants: [
+      { color: "Preto", price: 19999 },
+      { color: "Cinza", price: 19999 },
+      { color: "Verde", price: 19999 },
+    ],
+  },
+
+  // Tênis
+  {
+    name: "Tênis Nike Air Max",
+    description:
+      "Tênis Nike Air Max com tecnologia de amortecimento a ar para máximo conforto.",
+    categoryName: "Tênis",
+    variants: [
+      { color: "Preto", price: 89999 },
+      { color: "Branco", price: 89999 },
+      { color: "Azul", price: 89999 },
+    ],
+  },
 ];
 
 async function main() {
@@ -594,7 +772,7 @@ async function main() {
         const productKey = productData.name as keyof typeof productImages;
         const variantImages =
           productImages[productKey]?.[
-            variantData.color as keyof (typeof productImages)[typeof productKey]
+          variantData.color as keyof (typeof productImages)[typeof productKey]
           ] || [];
 
         console.log(`  🎨 Criando variante: ${variantData.color}`);
@@ -613,8 +791,7 @@ async function main() {
 
     console.log("✅ Seeding concluído com sucesso!");
     console.log(
-      `📊 Foram criadas ${categories.length} categorias, ${
-        products.length
+      `📊 Foram criadas ${categories.length} categorias, ${products.length
       } produtos com ${products.reduce(
         (acc, p) => acc + p.variants.length,
         0,

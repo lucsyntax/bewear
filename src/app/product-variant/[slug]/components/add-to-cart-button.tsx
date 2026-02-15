@@ -29,9 +29,8 @@ const AddToCartButton = ({
   });
   return (
     <Button
-      className="rounded-full"
+      className="w-full rounded-none border-2 border-black bg-black text-white font-black uppercase tracking-widest hover:bg-white hover:text-black hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] transition-all h-14"
       size="lg"
-      variant="outline"
       disabled={isPending}
       onClick={() => mutate()}
     >

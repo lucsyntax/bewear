@@ -1,4 +1,4 @@
-export const dynamic = "force-dynamic";
+export const revalidate = 60;
 
 import { desc } from "drizzle-orm";
 import Image from "next/image";
@@ -8,6 +8,8 @@ import Footer from "@/components/common/footer";
 import { Header } from "@/components/common/header";
 import PartnerBrands from "@/components/common/partner-brands";
 import ProductList from "@/components/common/product-list";
+import { Hero } from "@/components/home/hero";
+import PromoBanner from "@/components/home/promo-banner";
 import { db } from "@/db";
 import { productTable } from "@/db/schema";
 
@@ -29,40 +31,23 @@ const Home = async () => {
   return (
     <>
       <Header />
-      <div className="space-y-6">
+      <main className="space-y-6">
+        <Hero />
         <div className="px-5">
-          <Image
-            src="/banner-01.png"
-            alt="leve uma vida com estilo"
-            height={0}
-            width={0}
-            sizes="100vw"
-            className="h-auto w-full"
-          />
-
           <PartnerBrands title="Marcas parceiras" />
+
+
 
           <ProductList products={products} title="Mais vendidos" />
 
-          <div className="px-5">
-            <CategorySelector categories={categories} />
-          </div>
+          <CategorySelector categories={categories} />
 
-          <div className="px-5">
-            <Image
-              src="/banner-02.png"
-              alt="Seja autentico"
-              height={0}
-              width={0}
-              sizes="100vw"
-              className="h-auto w-full"
-            />
-          </div>
+          <PromoBanner />
 
           <ProductList products={newLyCreatedProducts} title="Novos produtos" />
         </div>
         <Footer />
-      </div>
+      </main>
     </>
   );
 };

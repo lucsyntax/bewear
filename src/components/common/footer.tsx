@@ -1,11 +1,13 @@
 const Footer = () => {
   return (
-    <div className="bg-accent w-full gap-1 p-8">
-      <p className="text-xs font-medium">© 2025 Copyright BEWEAR</p>
-      <p className="text-muted-foreground text-xs font-medium">
+    <footer className="bg-accent w-full gap-1 p-8">
+      <p className="text-xs font-medium text-white">
+        © {new Date().getFullYear()} Copyright BEWEAR
+      </p>
+      <p className="text-xs font-medium text-white/80">
         Todos os direitos reservados.
       </p>
-    </div>
+    </footer>
   );
 };
 
