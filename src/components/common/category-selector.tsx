@@ -13,7 +13,7 @@ const CategorySelector = ({ categories }: CategorySelectorProps) => {
     <div className="py-6">
       <div className="flex items-center justify-between mb-4">
          <h3 className="font-black text-xl uppercase tracking-tighter">
-            Categorias
+            CATEGORIAS
          </h3>
       </div>
       <div className="flex flex-wrap gap-3">

@@ -25,7 +25,7 @@ const ProductActions = ({ productVariantId }: ProductActionsProps) => {
   return (
     <div className="space-y-6">
       <div className="flex items-center gap-4">
-        <label className="font-mono text-sm uppercase tracking-wide">Quantidade:</label>
+        <label className="font-mono text-sm uppercase tracking-wide">QUANTIDADE:</label>
         <div className="flex items-center border-2 border-border bg-card shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
           <Button
             size="icon"
@@ -55,7 +55,7 @@ const ProductActions = ({ productVariantId }: ProductActionsProps) => {
           quantity={quantity}
         />
         <Button className="w-full rounded-none border-2 border-black bg-white text-black text-lg font-black uppercase tracking-wider hover:bg-black hover:text-white hover:translate-x-[2px] hover:translate-y-[2px] transition-all shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-none" size="lg">
-          Comprar agora
+          COMPRAR AGORA
         </Button>
       </div>
     </div>

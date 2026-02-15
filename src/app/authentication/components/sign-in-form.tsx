@@ -83,8 +83,8 @@ const SignInForm = () => {
     <>
       <Card className="w-full">
         <CardHeader>
-          <CardTitle>Entrar</CardTitle>
-          <CardDescription>Faça login para continuar.</CardDescription>
+          <CardTitle>ENTRAR</CardTitle>
+          <CardDescription>FAÇA LOGIN PARA CONTINUAR.</CardDescription>
         </CardHeader>
 
         <Form {...form}>
@@ -95,9 +95,9 @@ const SignInForm = () => {
                 name="email"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Email</FormLabel>
+                    <FormLabel>EMAIL</FormLabel>
                     <FormControl>
-                      <Input placeholder="Digite seu email" {...field} />
+                      <Input placeholder="DIGITE SEU EMAIL" {...field} />
                     </FormControl>
 
                     <FormMessage />
@@ -109,10 +109,10 @@ const SignInForm = () => {
                 name="password"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Senha</FormLabel>
+                    <FormLabel>SENHA</FormLabel>
                     <FormControl>
                       <Input
-                        placeholder="Digite sua senha"
+                        placeholder="DIGITE SUA SENHA"
                         type="password"
                         {...field}
                       />
@@ -125,7 +125,7 @@ const SignInForm = () => {
             </CardContent>
             <CardFooter className="flex flex-col gap-2">
               <Button type="submit" className="w-full">
-                Entrar
+                ENTRAR
               </Button>
               <Button
                 variant="outline"
@@ -151,7 +151,7 @@ const SignInForm = () => {
                     fill="#EA4335"
                   />
                 </svg>
-                Entrar com Google
+                ENTRAR COM GOOGLE
               </Button>
             </CardFooter>
           </form>

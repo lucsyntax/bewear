@@ -87,8 +87,8 @@ const SignUpForm = () => {
     <>
       <Card className="w-full">
         <CardHeader>
-          <CardTitle>Criar conta</CardTitle>
-          <CardDescription>Crie uma conta para continuar</CardDescription>
+          <CardTitle>CRIAR CONTA</CardTitle>
+          <CardDescription>CRIE UMA CONTA PARA CONTINUAR</CardDescription>
         </CardHeader>
 
         <Form {...form}>
@@ -99,9 +99,9 @@ const SignUpForm = () => {
                 name="name"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Nome</FormLabel>
+                    <FormLabel>NOME</FormLabel>
                     <FormControl>
-                      <Input placeholder="Digite seu nome" {...field} />
+                      <Input placeholder="DIGITE SEU NOME" {...field} />
                     </FormControl>
 
                     <FormMessage />
@@ -113,9 +113,9 @@ const SignUpForm = () => {
                 name="email"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Email</FormLabel>
+                    <FormLabel>EMAIL</FormLabel>
                     <FormControl>
-                      <Input placeholder="Digite seu email" {...field} />
+                      <Input placeholder="DIGITE SEU EMAIL" {...field} />
                     </FormControl>
 
                     <FormMessage />
@@ -127,10 +127,10 @@ const SignUpForm = () => {
                 name="password"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Senha</FormLabel>
+                    <FormLabel>SENHA</FormLabel>
                     <FormControl>
                       <Input
-                        placeholder="Digite sua senha"
+                        placeholder="DIGITE SUA SENHA"
                         type="password"
                         {...field}
                       />
@@ -145,10 +145,10 @@ const SignUpForm = () => {
                 name="passwordConfirmation"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Confirmar senha</FormLabel>
+                    <FormLabel>CONFIRMAR SENHA</FormLabel>
                     <FormControl>
                       <Input
-                        placeholder="Digite sua senha novamente"
+                        placeholder="DIGITE SUA SENHA NOVAMENTE"
                         type="password"
                         {...field}
                       />
@@ -160,7 +160,7 @@ const SignUpForm = () => {
               />
             </CardContent>
             <CardFooter>
-              <Button className="w-full">Criar conta</Button>
+              <Button className="w-full">CRIAR CONTA</Button>
             </CardFooter>
           </form>
         </Form>

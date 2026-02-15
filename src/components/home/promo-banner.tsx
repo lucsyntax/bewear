@@ -23,14 +23,14 @@ const PromoBanner = () => {
         </h2>
         
         <p className="mt-4 max-w-md text-lg font-bold text-white bg-black px-2 uppercase tracking-wide">
-          Nova coleção Streetwear {new Date().getFullYear()}
+          NOVA COLEÇÃO STREETWEAR {new Date().getFullYear()}
         </p>
 
         <Link
           href="/category/camisetas"
           className="mt-8 relative px-8 py-4 bg-white text-black font-black text-xl uppercase tracking-tighter border-2 border-black transition-all hover:-translate-y-1 hover:translate-x-1 hover:shadow-[6px_6px_0px_0px_var(--color-primary)] active:translate-x-0 active:translate-y-0 active:shadow-none"
         >
-          Comprar Agora
+          COMPRAR AGORA
         </Link>
       </div>
       

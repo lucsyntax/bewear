@@ -36,7 +36,12 @@ export const Header = () => {
             <SheetHeader>
               <SheetTitle>Menu</SheetTitle>
             </SheetHeader>
-            <div className="px-5">
+            <div className="flex flex-col gap-6 px-5 mt-6">
+              <Link href="/catalog" className="text-2xl font-black uppercase italic tracking-tighter hover:text-primary transition-colors">
+                CATÁLOGO
+              </Link>
+              <div className="h-[2px] w-10 bg-black/10" />
+
               {session?.user ? (
                 <>
                   <div className="flex justify-between">

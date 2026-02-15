@@ -74,7 +74,7 @@ const ProductVariantPage = async ({ params }: ProductVariantPageProps) => {
 
             <div className="space-y-6">
               <div className="space-y-3">
-                 <h4 className="font-mono text-sm uppercase tracking-wide">Variantes Disponíveis:</h4>
+                 <h4 className="font-mono text-sm uppercase tracking-wide">VARIANTES DISPONÍVEIS:</h4>
                  <VariantSelector
                     selectedVariantSlug={productVariant.slug}
                     variants={productVariant.product.variants}
@@ -85,7 +85,7 @@ const ProductVariantPage = async ({ params }: ProductVariantPageProps) => {
             </div>
 
             <div className="border-t-2 border-border pt-8">
-              <h4 className="mb-4 font-black uppercase tracking-tight text-xl">Detalhes</h4>
+              <h4 className="mb-4 font-black uppercase tracking-tight text-xl">DETALHES</h4>
               <p className="font-sans text-lg leading-relaxed text-muted-foreground">
                 {productVariant.product.description}
               </p>
@@ -94,7 +94,7 @@ const ProductVariantPage = async ({ params }: ProductVariantPageProps) => {
         </div>
 
         <div className="mt-20">
-          <ProductList products={likelyProducts} title="Talvez você goste" />
+          <ProductList products={likelyProducts} title="VOCÊ TAMBÉM PODE GOSTAR" />
         </div>
       </div>
       <Footer />

@@ -1,6 +1,6 @@
+import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
 
 export const Hero = () => {
   return (
@@ -19,15 +19,14 @@ export const Hero = () => {
             {/* Text Content */}
             <div className="flex flex-col space-y-6">
                 <div className="inline-block px-3 py-1 bg-accent text-accent-foreground font-mono text-sm font-bold border-2 border-border w-max transform -rotate-2">
-                    NOVAS CHEGADAS 2026
+                    NOVIDADES 2026
                 </div>
                 <h1 className="text-4xl md:text-8xl font-black tracking-tighter uppercase leading-[0.9] text-foreground drop-shadow-[4px_4px_0px_rgba(0,0,0,0.2)]">
-                    STREET<br/>
-                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">WEAR</span><br/>
+                    BE<span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">WEAR</span><br/>
                     REVOLUTION
                 </h1>
                 <p className="max-w-[600px] text-muted-foreground text-xl md:text-2xl font-medium border-l-4 border-primary pl-4">
-                    Domine as ruas com estilo autêntico. Qualidade premium, design brutalista.
+                    Redefinindo o streetwear. Estilo autêntico e qualidade superior para quem não segue tendências, cria.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 pt-4">
                     <Link href="/catalog" 
@@ -56,7 +55,7 @@ export const Hero = () => {
                     />
                     {/* Overlay text on image */}
                     <div className="absolute bottom-4 left-4 bg-white/80 backdrop-blur-sm p-2 border border-black transform rotate-1">
-                        <p className="font-mono text-xs font-bold text-black">DROP #01 // LIMITED</p>
+                        <p className="font-mono text-xs font-bold text-black">COLEÇÃO LIMITADA #01</p>
                     </div>
                 </div>
             </div>

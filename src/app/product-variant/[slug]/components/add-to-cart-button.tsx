@@ -35,7 +35,7 @@ const AddToCartButton = ({
       onClick={() => mutate()}
     >
       {isPending && <Loader2 className="animate-spin" />}
-      Adicionar a sacola
+      ADICIONAR À SACOLA
     </Button>
   );
 };

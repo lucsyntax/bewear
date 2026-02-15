@@ -51,7 +51,7 @@ const ProductItem = ({ product, textContainerClassName }: ProductItemProps) => {
         {/* Badge — only for products less than 30 days old */}
         {product.createdAt && (Date.now() - new Date(product.createdAt).getTime()) < 30 * 24 * 60 * 60 * 1000 && (
           <div className="absolute left-0 top-0 bg-primary px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-primary-foreground">
-            Novidade
+            NOVIDADE
           </div>
         )}
       </div>

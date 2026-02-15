@@ -1,7 +1,7 @@
 "use client";
 
-import { useState } from "react";
 import { ArrowRight } from "lucide-react";
+import { useState } from "react";
 
 import { productTable, productVariantTable } from "@/db/schema";
 
@@ -40,7 +40,7 @@ const ProductList = ({ title, products, initialCount = 4 }: ProductListProps) =>
             onClick={() => setExpanded(true)}
             className="group flex items-center gap-2 border-2 border-foreground bg-background px-6 py-3 font-mono text-sm font-bold uppercase tracking-wider text-foreground transition-all duration-200 hover:bg-foreground hover:text-background hover:shadow-[4px_4px_0px_0px_var(--color-primary)] active:translate-x-[2px] active:translate-y-[2px] active:shadow-none cursor-pointer"
           >
-            Ver mais produtos
+            VER MAIS PRODUTOS
             <ArrowRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-1" />
           </button>
         </div>

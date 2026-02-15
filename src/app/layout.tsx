@@ -32,7 +32,19 @@ export default function RootLayout({
         className={`${interTight.variable} ${jetbrainsMono.variable} antialiased`}
       >
         <ReactQueryProvider>{children}</ReactQueryProvider>
-        <Toaster />
+
+        <Toaster 
+          toastOptions={{
+            className: "bg-black border border-white/20 text-white font-mono rounded-none shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]",
+            style: {
+              borderRadius: "0px",
+              background: "#000",
+              color: "#fff",
+              border: "1px solid #333",
+              fontFamily: "var(--font-mono)",
+            },
+          }}
+        />
       </body>
     </html>
   );

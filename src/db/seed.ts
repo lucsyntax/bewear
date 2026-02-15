@@ -241,81 +241,81 @@ const productImages = {
   // ── New Products (placeholder images) ──
   "Shoulder Bag": {
     Preta: [
-      "https://placehold.co/800x800.png/1a1a1a/ffffff?text=Shoulder+Bag",
+      "/products/acessorios/5/preta.png",
     ],
     Bege: [
-      "https://placehold.co/800x800.png/d4b896/333333?text=Shoulder+Bag",
+      "/products/acessorios/5/bege.png",
     ],
   },
   "Bucket Hat": {
     Preto: [
-      "https://placehold.co/800x800.png/1a1a1a/ffffff?text=Bucket+Hat",
+      "/products/acessorios/6/preto.png",
     ],
     Branco: [
-      "https://placehold.co/800x800.png/f5f5f5/333333?text=Bucket+Hat",
+      "/products/acessorios/6/branco.png",
     ],
     Verde: [
-      "https://placehold.co/800x800.png/2d5a27/ffffff?text=Bucket+Hat",
+      "/products/acessorios/6/verde.png",
     ],
   },
   "Shorts Fleece": {
     Cinza: [
-      "https://placehold.co/800x800.png/6b6b6b/ffffff?text=Shorts+Fleece",
+      "/products/bermuda-shorts/5/cinza.png",
     ],
     Preto: [
-      "https://placehold.co/800x800.png/1a1a1a/ffffff?text=Shorts+Fleece",
+      "/products/bermuda-shorts/5/preto.png",
     ],
   },
   "Calça Cargo": {
     Verde: [
-      "https://placehold.co/800x800.png/2d5a27/ffffff?text=Calca+Cargo",
+      "/products/calcas/5/verde.png",
     ],
     Preta: [
-      "https://placehold.co/800x800.png/1a1a1a/ffffff?text=Calca+Cargo",
+      "/products/calcas/5/preta.png",
     ],
     Bege: [
-      "https://placehold.co/800x800.png/d4b896/333333?text=Calca+Cargo",
+      "/products/calcas/5/bege.png",
     ],
   },
   "Camiseta Oversized": {
     Preta: [
-      "https://placehold.co/800x800.png/1a1a1a/ffffff?text=Camiseta+Oversized",
+      "/products/camisetas/5/preta.png",
     ],
     Branca: [
-      "https://placehold.co/800x800.png/f5f5f5/333333?text=Camiseta+Oversized",
+      "/products/camisetas/5/branca.png",
     ],
     Cinza: [
-      "https://placehold.co/800x800.png/6b6b6b/ffffff?text=Camiseta+Oversized",
+      "/products/camisetas/5/cinza.png",
     ],
   },
   "Regata Training": {
     Preta: [
-      "https://placehold.co/800x800.png/1a1a1a/ffffff?text=Regata+Training",
+      "/products/camisetas/6/preta.png",
     ],
     Branca: [
-      "https://placehold.co/800x800.png/f5f5f5/333333?text=Regata+Training",
+      "https://placehold.co/800x800.png/fefefe/333333?text=Regata+Training+Branca",
     ],
   },
   "Moletom Hoodie": {
     Preto: [
-      "https://placehold.co/800x800.png/1a1a1a/ffffff?text=Moletom+Hoodie",
+      "/products/jaquetas-moletons/5/preto.png",
     ],
     Cinza: [
-      "https://placehold.co/800x800.png/6b6b6b/ffffff?text=Moletom+Hoodie",
+      "https://placehold.co/800x800.png/a8a8a8/333333?text=Hoodie+Cinza",
     ],
     Verde: [
-      "https://placehold.co/800x800.png/2d5a27/ffffff?text=Moletom+Hoodie",
+      "https://placehold.co/800x800.png/2e4d2a/ffffff?text=Hoodie+Verde",
     ],
   },
   "Tênis Nike Air Max": {
     Preto: [
-      "https://placehold.co/800x800.png/1a1a1a/ffffff?text=Air+Max",
+      "/products/tenis/5/preto.png",
     ],
     Branco: [
-      "https://placehold.co/800x800.png/f5f5f5/333333?text=Air+Max",
+      "/products/tenis/5/branco.png",
     ],
     Azul: [
-      "https://placehold.co/800x800.png/1e3a5f/ffffff?text=Air+Max",
+      "https://placehold.co/800x800.png/1a365d/ffffff?text=Air+Max+Azul",
     ],
   },
 };

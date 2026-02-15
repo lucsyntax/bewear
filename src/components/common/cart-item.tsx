@@ -1,3 +1,6 @@
+"use client";
+
+import { motion } from "framer-motion";
 import { MinusIcon, PlusIcon, Trash2Icon } from "lucide-react";
 import Image from "next/image";
 import { toast } from "sonner";
@@ -32,84 +35,113 @@ const CartItem = ({
   const decreaseCartProductQuantityMutation = useDecreaseCartProduct(id);
   const increaseCartProductQuantityMutation =
     useIncreaseCartProduct(productVariantId);
+
   const handleDeleteClick = () => {
     removeProductFromCartMutation.mutate(undefined, {
-      onSuccess: () => {
-        toast.success("Produto removido do carrinho.");
-      },
-      onError: () => {
-        toast.error("Erro ao remover produto do carrinho.");
-      },
+      onSuccess: () => toast.success("PRODUTO REMOVIDO"),
+      onError: () => toast.error("ERRO AO REMOVER"),
     });
   };
+
   const handleDecreaseQuantityClick = () => {
-    decreaseCartProductQuantityMutation.mutate(undefined, {
-      onSuccess: () => {
-        toast.success("Quantidade do produto diminuida.");
-      },
-    });
+    if (decreaseCartProductQuantityMutation.isPending) return;
+    decreaseCartProductQuantityMutation.mutate(undefined);
   };
+
   const handleIncreaseQuantityClick = () => {
-    increaseCartProductQuantityMutation.mutate(undefined, {
-      onSuccess: () => {
-        toast.success("Quantidade do produto aumentada");
-      },
-    });
+    if (increaseCartProductQuantityMutation.isPending) return;
+    increaseCartProductQuantityMutation.mutate(undefined);
   };
+
   return (
-    <div className="flex items-center justify-between border-b-2 border-border pb-4 mb-4">
-      <div className="flex items-center gap-4">
-        <div className="relative border-2 border-border shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
-            <Image
-            src={productVariantImageUrl}
-            alt={productVariantName}
-            width={78}
-            height={78}
-            className="object-cover"
-            />
-        </div>
-        <div className="flex flex-col gap-2">
-          <p className="text-sm font-black uppercase tracking-tight">{productName}</p>
-          <p className="text-muted-foreground font-mono text-xs font-medium uppercase">
-            {productVariantName}
+    <motion.div 
+      whileHover={{ x: 4 }}
+      className="relative flex items-center gap-6 border-2 border-black bg-white p-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] transition-all hover:bg-primary/5"
+    >
+      {/* Etiqueta de Quantidade */}
+      <div className="absolute -left-3 top-4 -rotate-90 bg-black px-2 py-0.5 text-[10px] font-bold text-white uppercase italic">
+        QTD_{quantity.toString().padStart(2, '0')}
+      </div>
+
+      <div className="relative h-24 w-24 flex-shrink-0 border-2 border-black grayscale contrast-125">
+        <Image
+          src={productVariantImageUrl}
+          alt={productVariantName}
+          fill
+          className="object-cover"
+        />
+      </div>
+
+      <div className="flex flex-1 flex-col justify-between self-stretch py-1">
+        <div className="space-y-1">
+          <h4 className="text-sm font-black uppercase leading-none tracking-tight line-clamp-2">
+            {productName}
+          </h4>
+          <p className="font-mono text-[10px] font-bold uppercase text-muted-foreground">
+            {productVariantName} <span>{"//"}</span> REF: {productVariantId.substring(0, 8)}
           </p>
-          <div className="flex w-[100px] items-center border-2 border-border bg-card">
+        </div>
+
+        <div className="flex items-center gap-4">
+          <div className="flex h-8 items-center border-2 border-black bg-white">
             <Button
-              className="h-6 w-8 rounded-none border-r-2 border-border hover:bg-muted"
+              className="h-full w-8 rounded-none border-r-2 border-black p-0 hover:bg-black hover:text-white disabled:opacity-50"
               size="icon"
               variant="ghost"
               onClick={handleDecreaseQuantityClick}
+              disabled={decreaseCartProductQuantityMutation.isPending}
             >
-              <MinusIcon className="h-3 w-3" />
+              <motion.div
+                animate={decreaseCartProductQuantityMutation.isPending ? { opacity: [0.3, 1, 0.3] } : {}}
+                transition={{ repeat: Infinity, duration: 0.5 }}
+              >
+                <MinusIcon className="h-3 w-3" />
+              </motion.div>
             </Button>
-            <div className="flex h-6 w-full items-center justify-center font-mono text-xs font-bold">
+            <div className="flex w-10 items-center justify-center font-mono text-xs font-black relative overflow-hidden">
+               <motion.span
+                 key={quantity}
+                 initial={{ y: 10, opacity: 0 }}
+                 animate={{ y: 0, opacity: 1 }}
+                 className="block"
+               >
                 {quantity}
+               </motion.span>
             </div>
             <Button
-              className="h-6 w-8 rounded-none border-l-2 border-border hover:bg-muted"
+              className="h-full w-8 rounded-none border-l-2 border-black p-0 hover:bg-black hover:text-white disabled:opacity-50"
               size="icon"
               variant="ghost"
               onClick={handleIncreaseQuantityClick}
+              disabled={increaseCartProductQuantityMutation.isPending}
             >
-              <PlusIcon className="h-3 w-3" />
+              <motion.div
+                animate={increaseCartProductQuantityMutation.isPending ? { opacity: [0.3, 1, 0.3] } : {}}
+                transition={{ repeat: Infinity, duration: 0.5 }}
+              >
+                <PlusIcon className="h-3 w-3" />
+              </motion.div>
             </Button>
           </div>
+          
+          <Button
+            variant="ghost"
+            size="icon"
+            onClick={handleDeleteClick}
+            className="h-8 w-8 rounded-none border-2 border-transparent hover:border-black hover:bg-primary/10 transition-all"
+          >
+            <Trash2Icon className="h-4 w-4" />
+          </Button>
         </div>
       </div>
-      <div className="flex flex-col items-end justify-center gap-3">
-        <Button 
-            variant="ghost" 
-            size="icon" 
-            onClick={handleDeleteClick}
-            className="h-8 w-8 rounded-none border-2 border-transparent hover:border-destructive hover:text-destructive hover:shadow-[2px_2px_0px_0px_var(--color-destructive)] transition-all"
-        >
-          <Trash2Icon className="h-4 w-4" />
-        </Button>
-        <p className="font-mono text-sm font-bold bg-primary text-primary-foreground px-1 -rotate-2">
+
+      <div className="flex flex-col items-end justify-between self-stretch py-1">
+        <span className="font-mono text-[9px] font-bold opacity-30">P_ITEM_{id.substring(0,4)}</span>
+        <div className="bg-black px-2 py-1 text-sm font-black text-white -rotate-1">
           {formatCentsToBRL(productVariantPriceInCents)}
-        </p>
+        </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

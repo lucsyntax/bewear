@@ -1,7 +1,6 @@
 export const revalidate = 60;
 
 import { desc } from "drizzle-orm";
-import Image from "next/image";
 
 import CategorySelector from "@/components/common/category-selector";
 import Footer from "@/components/common/footer";
@@ -34,17 +33,17 @@ const Home = async () => {
       <main className="space-y-6">
         <Hero />
         <div className="px-5">
-          <PartnerBrands title="Marcas parceiras" />
+          <PartnerBrands title="PARCEIROS" />
 
 
 
-          <ProductList products={products} title="Mais vendidos" />
+          <ProductList products={products} title="MAIS VENDIDOS" />
 
           <CategorySelector categories={categories} />
 
           <PromoBanner />
 
-          <ProductList products={newLyCreatedProducts} title="Novos produtos" />
+          <ProductList products={newLyCreatedProducts} title="NOVA COLEÇÃO" />
         </div>
         <Footer />
       </main>
